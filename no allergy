@@ -1,0 +1,14 @@
+Sub 開始()
+
+If Sheets("アレルギーが気になる方へ").Range("D28") = 1 Then
+ Call アレルギーチェック1
+
+ElseIf Sheets("アレルギーが気になる方へ").Range("D28") = 0 Then
+ MsgBox ("あなたはアレルギーを持っていないので、全ての食品をご賞味いただけます")
+
+Else
+ Call アレルギーチェック1
+
+End If
+
+End Sub
