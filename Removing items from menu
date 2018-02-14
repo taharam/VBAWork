@@ -1,0 +1,144 @@
+Sub 卵アレルギーチェック()
+'
+' 卵アレルギーチェック Macro
+'
+
+'
+    Sheets("卵").Select
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1, Criteria1:="-"
+    Range("B2:C49").Select
+    Selection.Copy
+    Sheets("結果").Select
+    Range("B5").Select
+    ActiveSheet.Paste
+End Sub
+Sub 乳アレルギーチェック()
+'
+' 乳アレルギーチェック Macro
+'
+
+'
+    Sheets("乳").Select
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1, Criteria1:="-"
+    Range("B2:C49").Select
+    Selection.Copy
+    Sheets("結果").Select
+    Range("B14").Select
+    ActiveSheet.Paste
+
+End Sub
+Sub 小麦アレルギーチェック()
+'
+' 小麦アレルギーチェック Macro
+'
+
+'
+    Sheets("小麦").Select
+    ActiveWindow.SmallScroll Down:=-24
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1, Criteria1:="-"
+    Range("B2:C49").Select
+    Selection.Copy
+    Sheets("結果").Select
+    Range("B18").Select
+    ActiveSheet.Paste
+End Sub
+Sub そばアレルギーチェック()
+'
+' そばアレルギーチェック Macro
+'
+
+'
+    Sheets("そば").Select
+    Selection.AutoFilter
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1
+    Range("B2:C51").Select
+    Selection.Copy
+    Sheets("結果").Select
+    Range("B23").Select
+    ActiveSheet.Paste
+    ActiveWindow.ScrollRow = 2
+    ActiveWindow.ScrollRow = 3
+    ActiveWindow.ScrollRow = 4
+    ActiveWindow.ScrollRow = 5
+    ActiveWindow.ScrollRow = 6
+    ActiveWindow.ScrollRow = 7
+    ActiveWindow.ScrollRow = 8
+    ActiveWindow.ScrollRow = 9
+    ActiveWindow.ScrollRow = 10
+    ActiveWindow.ScrollRow = 11
+    ActiveWindow.ScrollRow = 12
+    ActiveWindow.ScrollRow = 13
+    ActiveWindow.ScrollRow = 14
+    ActiveWindow.ScrollRow = 15
+    ActiveWindow.ScrollRow = 16
+    ActiveWindow.ScrollRow = 17
+    ActiveWindow.ScrollRow = 18
+    ActiveWindow.ScrollRow = 19
+End Sub
+Sub 落花生アレルギーチェック()
+'
+' 落花生アレルギーチェック Macro
+'
+
+'
+    Sheets("落花生").Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1, Criteria1:="-"
+    Range("B2:C51").Select
+    Selection.Copy
+    Sheets("結果").Select
+    ActiveWindow.SmallScroll Down:=31
+    Range("B74").Select
+    ActiveSheet.Paste
+    Range("D76").Select
+End Sub
+Sub えびアレルギーチェック()
+'
+' えびアレルギーチェック Macro
+'
+
+'
+    Sheets("えび").Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1, Criteria1:="-"
+    Range("B2:C51").Select
+    Selection.Copy
+    Sheets("結果").Select
+    ActiveWindow.ScrollRow = 51
+    ActiveWindow.ScrollRow = 52
+    ActiveWindow.ScrollRow = 54
+    ActiveWindow.ScrollRow = 56
+    ActiveWindow.ScrollRow = 58
+    ActiveWindow.ScrollRow = 60
+    ActiveWindow.ScrollRow = 62
+    ActiveWindow.ScrollRow = 63
+    ActiveWindow.ScrollRow = 64
+    ActiveWindow.ScrollRow = 65
+    ActiveWindow.ScrollRow = 66
+    ActiveWindow.ScrollRow = 67
+    ActiveWindow.ScrollRow = 68
+    ActiveWindow.ScrollRow = 69
+    ActiveWindow.SmallScroll Down:=5
+    Range("B124").Select
+    ActiveSheet.Paste
+End Sub
+Sub かにアレルギーチェック()
+'
+' かにアレルギーチェック Macro
+'
+
+'
+    Sheets("かに").Select
+    Range("B2").Select
+    Application.CutCopyMode = False
+    Selection.AutoFilter
+    ActiveSheet.Range("$B$2:$C$51").AutoFilter Field:=1
+    Range("B2:C51").Select
+    Selection.Copy
+    Sheets("結果").Select
+    ActiveWindow.SmallScroll Down:=74
+    Range("B174").Select
+    ActiveSheet.Paste
+End Sub
