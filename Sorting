@@ -1,0 +1,94 @@
+Sub アレルギーチェック1()
+
+
+If Sheets("卵").Range("B2") = "" Then
+ Call アレルギーチェック2
+ 
+
+Else
+ Call 卵アレルギーチェック
+ Call アレルギーチェック2
+ 
+End If
+
+End Sub
+
+
+Sub アレルギーチェック2()
+
+If Sheets("乳").Range("B2") = "" Then
+  Call アレルギーチェック3
+
+Else
+ Call 乳アレルギーチェック
+ Call アレルギーチェック3
+
+End If
+
+End Sub
+
+Sub アレルギーチェック3()
+
+If Sheets("小麦").Range("B2") = "" Then
+  Call アレルギーチェック4
+
+Else
+ Call 小麦アレルギーチェック
+ Call アレルギーチェック4
+
+End If
+
+End Sub
+
+Sub アレルギーチェック4()
+
+If Sheets("そば").Range("B2") = "" Then
+  Call アレルギーチェック5
+
+Else
+ Call そばアレルギーチェック
+ Call アレルギーチェック5
+
+End If
+
+End Sub
+
+Sub アレルギーチェック5()
+
+If Sheets("落花生").Range("B2") = "" Then
+  Call アレルギーチェック6
+
+Else
+ Call 落花生アレルギーチェック
+ Call アレルギーチェック6
+
+End If
+
+End Sub
+
+Sub アレルギーチェック6()
+
+If Sheets("えび").Range("B2") = "" Then
+  Call アレルギーチェック7
+
+Else
+ Call えびアレルギーチェック
+ Call アレルギーチェック7
+
+End If
+
+End Sub
+
+Sub アレルギーチェック7()
+
+If Sheets("かに").Range("B2") = "" Then
+  Sheets("集計").Activate
+  UserForm5.Show
+Else
+ Call かにアレルギーチェック
+  Sheets("集計").Activate
+  UserForm5.Show
+End If
+
+End Sub
+
