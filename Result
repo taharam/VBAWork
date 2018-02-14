@@ -1,0 +1,90 @@
+Sub 結果()
+'
+' 結果 Macro
+'
+
+'
+    Sheets("集計").Select
+    Range("D9:E58").Select
+    Selection.AutoFilter
+    ActiveWindow.SmallScroll Down:=-12
+    ActiveSheet.Range("$D$9:$E$58").AutoFilter Field:=1, Criteria1:="<>"
+    Sheets("アレルギーが気になる方へ").Select
+    Range("D19:E26").Select
+    Selection.AutoFilter
+    ActiveSheet.Range("$D$19:$E$26").AutoFilter Field:=1, Criteria1:="<>"
+    Range("E20:E26").Select
+    Selection.Copy
+    Sheets("集計").Select
+    Range("E5").Select
+    Selection.PasteSpecial Paste:=xlPasteAll, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=True
+    Range("E6").Select
+End Sub
+Sub 終了()
+'
+' 終了 Macro
+'
+
+'
+    Sheets("集計").Select
+    Range("E5:N5").Select
+    Selection.ClearContents
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    Range("D9:E56").Select
+    Selection.AutoFilter
+    Range("E7").Select
+    Sheets("結果").Select
+    ActiveWindow.Zoom = 25
+    ActiveWindow.Zoom = 10
+    Range("A6:Z254").Select
+    Selection.ClearContents
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveWindow.Zoom = 25
+    ActiveWindow.ScrollRow = 5
+    ActiveWindow.ScrollRow = 4
+    ActiveWindow.ScrollRow = 2
+    ActiveWindow.ScrollRow = 1
+    Range("A5:C5").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    Selection.ClearContents
+    Range("D8").Select
+    Sheets("アレルギーが気になる方へ").Select
+    Selection.AutoFilter
+    Range("D20:D26").Select
+    Selection.ClearContents
+    Range("F28").Select
+    
+    Sheets("MENU").Activate
+End Sub
+Sub アレルギーチェックスタート()
+'
+' アレルギーチェックスタート Macro
+'
+
+
+    Sheets("アレルギーが気になる方へ").Select
+    UserForm1.Show
+    
+End Sub
